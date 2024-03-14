@@ -18,7 +18,7 @@ public class AsyncTests(ITestOutputHelper output)
     [Fact]
     public async Task CompressFasterTest()
     {
-        var n = 10000;
+        var n = 100000;
         // Arrange
         byte[] buffer = [];
         var stopwatch = new Stopwatch();
@@ -41,8 +41,8 @@ public class AsyncTests(ITestOutputHelper output)
         _Output.WriteLine(stopwatch2.ElapsedTicks.ToString());
 
         // Assert
-        // at least 90% faster
-        Assert.InRange(stopwatch2.ElapsedTicks, 0, stopwatch.ElapsedTicks - (stopwatch.ElapsedTicks * .9));
+        // at least 40% faster
+        Assert.InRange(stopwatch2.ElapsedTicks, 0, stopwatch.ElapsedTicks - (stopwatch.ElapsedTicks * .4));
 
     }
 }

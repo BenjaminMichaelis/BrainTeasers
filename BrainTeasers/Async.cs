@@ -22,6 +22,8 @@ public static class Async
 
     public static async Task<byte[]> Compress(byte[] buffer)
     {
+        if (0 == buffer.Length)
+            return buffer;
         using MemoryStream memoryStream = new();
         using System.IO.Compression.GZipStream gZipStream =
             new(
