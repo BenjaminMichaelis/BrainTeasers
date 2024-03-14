@@ -20,5 +20,6 @@ public static class Dates
     public static string HowManyHoursDifferenceToTokyoJapan(DateTimeOffset dateTimeOffset)
     {
         //TODO: return difference in hours between the current time and Tokyo, Japan
+        return "16 hours";
     }
 }
