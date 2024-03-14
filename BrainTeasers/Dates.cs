@@ -17,9 +17,8 @@ public static class Dates
         return false;
     }
 
-    public static DateTime TimeInTokyoJapan()
+    public static string HowManyHoursDifferenceToTokyoJapan(DateTimeOffset dateTimeOffset)
     {
-        //TODO: return the current time in Tokyo, Japan
-        return DateTime.UtcNow;
+        //TODO: return difference in hours between the current time and Tokyo, Japan
     }
 }

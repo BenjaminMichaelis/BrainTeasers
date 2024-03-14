@@ -28,9 +28,10 @@ public class DateTimeTests(ITestOutputHelper output)
     [Fact]
     public void TimeInTokyoJapan()
     {
-        // Arrange
-
-        Assert.Equal(Dates.TimeInTokyoJapan().ToShortTimeString(), DateTime.UtcNow.AddHours(9).ToShortTimeString());
-
+        Assert.Equal("16 hours", Dates.HowManyHoursDifferenceToTokyoJapan(DateTimeOffset.Now));
+        Assert.Equal("9 hours", Dates.HowManyHoursDifferenceToTokyoJapan(DateTimeOffset.Now.ToOffset(TimeSpan.FromHours(0))));
+        Assert.Equal("5 hours", Dates.HowManyHoursDifferenceToTokyoJapan(DateTimeOffset.Now.ToOffset(TimeSpan.FromHours(4))));
+        Assert.Equal("0 hours", Dates.HowManyHoursDifferenceToTokyoJapan(DateTimeOffset.Now.ToOffset(TimeSpan.FromHours(9))));
+        Assert.Equal("-5 hours", Dates.HowManyHoursDifferenceToTokyoJapan(DateTimeOffset.Now.ToOffset(TimeSpan.FromHours(14))));
     }
 }
