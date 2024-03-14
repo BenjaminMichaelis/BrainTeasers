@@ -1,5 +1,5 @@
 ﻿namespace BrainTeasers;
 
-public class Arithmetic
+public static class Arithmetic
 {
 }
