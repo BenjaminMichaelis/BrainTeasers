@@ -35,8 +35,10 @@ public static class Async
     }
 
     // change the code to pass the test that calls CompressFaster
-    public static async Task<byte[]> CompressFaster(byte[] buffer)
+    public static async ValueTask<byte[]> CompressFaster(byte[] buffer)
     {
+        if (0 == buffer.Length)
+            return buffer;
         using MemoryStream memoryStream = new();
         using System.IO.Compression.GZipStream gZipStream =
             new(

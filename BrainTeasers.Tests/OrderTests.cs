@@ -9,7 +9,7 @@ public class OrderTests
         Console.SetOut(stringWriter);
         Derived d = new();
         int i = 10;
-        d.Foo(i);
+        d.Foo(10);
         Assert.Equal("Derived.Foo(int)\r\n", stringWriter.ToString());
     }
 }

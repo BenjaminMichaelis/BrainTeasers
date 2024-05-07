@@ -6,13 +6,14 @@ public class ArithmeticTests
     public void SubtractionArithmaticTest()
     {
         // Assert
-        Assert.InRange(SubtractionArithmatic(), 1.0, 1.0);
+        Assert.InRange(SubtractionArithmatic(), (decimal)1.0, (decimal)1.0);
+        //Assert.Equal(1.0, SubtractionArithmatic());
     }
 
-    public static double SubtractionArithmatic()
+    public static decimal SubtractionArithmatic()
     {
-        double d1 = 1.000001;
-        double d2 = 0.000001;
+        decimal d1 = 1.000001m;
+        decimal d2 = 0.000001m;
         return (d1 - d2);
     }
 }

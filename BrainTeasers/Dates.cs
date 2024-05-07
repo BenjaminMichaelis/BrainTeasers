@@ -6,8 +6,7 @@ public static class Dates
 {
     public static bool IsLeapYear(DateTime date)
     {
-        //TODO: return true if the date is in a leap year
-        return false;
+        return  DateTime.IsLeapYear(date.Year);
     }
 
     public static bool IsDST(DateTime date)

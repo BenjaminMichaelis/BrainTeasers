@@ -7,11 +7,13 @@ public class StaticConstructorTests
     [Fact]
     public void CallsStaticConstructorTwice()
     {
+        InstanceCounter<string> a = new();
+        InstanceCounter<int> b = new();
         //TODO: Write code that makes the following assertion pass
         Assert.Equal(2, _refCount);
     }
 
-    private class InstanceCounter
+    private class InstanceCounter<T>
     {
         static InstanceCounter()
         {

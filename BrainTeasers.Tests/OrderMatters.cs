@@ -10,6 +10,7 @@ public class OrderMatters
         Console.SetOut(stringWriter);
         _ = new Foo();
         _ = new Bar();
+        int j = Bar.i;
         Assert.Equal("Foo\r\nBar\r\n", stringWriter.ToString());
     }
 }
